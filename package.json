@@ -1,13 +1,14 @@
 {
   "name": "@erksmaas/angular-plotly.js",
-  "version": "4.0.7",
+  "version": "4.0.9",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+      "postinstall": "ngcc"
   },
   "dependencies": {
     "@angular/animations": "~12.2.1",
