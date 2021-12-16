@@ -4,4 +4,3 @@ export * from './lib/plotly-via-window.module';
 export * from './lib/plotly-shared.module';
 export * from './lib/plotly.service';
 export * from './lib/plotly.component';
-//# sourceMappingURL=public-api.d.ts.map

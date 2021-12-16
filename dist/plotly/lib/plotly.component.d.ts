@@ -1,7 +1,6 @@
 import { ElementRef, EventEmitter, OnDestroy, OnChanges, OnInit, SimpleChanges, DoCheck, IterableDiffer, IterableDiffers, KeyValueDiffer, KeyValueDiffers } from '@angular/core';
 import { PlotlyService } from './plotly.service';
 import { Plotly } from './plotly.interface';
-import * as i0 from "@angular/core";
 export declare class PlotlyComponent implements OnInit, OnChanges, OnDestroy, DoCheck {
     plotly: PlotlyService;
     iterableDiffers: IterableDiffers;
@@ -76,7 +75,4 @@ export declare class PlotlyComponent implements OnInit, OnChanges, OnDestroy, Do
     updatePlot(): Promise<any>;
     updateWindowResizeHandler(): void;
     dataDifferTrackBy(_: number, item: any): unknown;
-    static ɵfac: i0.ɵɵFactoryDeclaration<PlotlyComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PlotlyComponent, "plotly-plot", never, { "data": "data"; "layout": "layout"; "config": "config"; "frames": "frames"; "style": "style"; "divId": "divId"; "revision": "revision"; "className": "className"; "debug": "debug"; "useResizeHandler": "useResizeHandler"; "updateOnLayoutChange": "updateOnLayoutChange"; "updateOnDataChange": "updateOnDataChange"; "updateOnlyWithRevision": "updateOnlyWithRevision"; }, { "initialized": "initialized"; "update": "update"; "purge": "purge"; "error": "error"; "afterExport": "afterExport"; "afterPlot": "afterPlot"; "animated": "animated"; "animatingFrame": "animatingFrame"; "animationInterrupted": "animationInterrupted"; "autoSize": "autoSize"; "beforeExport": "beforeExport"; "buttonClicked": "buttonClicked"; "click": "click"; "plotlyClick": "plotlyClick"; "clickAnnotation": "clickAnnotation"; "deselect": "deselect"; "doubleClick": "doubleClick"; "framework": "framework"; "hover": "hover"; "legendClick": "legendClick"; "legendDoubleClick": "legendDoubleClick"; "react": "react"; "relayout": "relayout"; "restyle": "restyle"; "redraw": "redraw"; "selected": "selected"; "selecting": "selecting"; "sliderChange": "sliderChange"; "sliderEnd": "sliderEnd"; "sliderStart": "sliderStart"; "transitioning": "transitioning"; "transitionInterrupted": "transitionInterrupted"; "unhover": "unhover"; "relayouting": "relayouting"; "treemapclick": "treemapclick"; "sunburstclick": "sunburstclick"; }, never, ["*"]>;
 }
-//# sourceMappingURL=plotly.component.d.ts.map

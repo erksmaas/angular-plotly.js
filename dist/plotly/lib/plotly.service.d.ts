@@ -1,5 +1,4 @@
 import { Plotly } from './plotly.interface';
-import * as i0 from "@angular/core";
 declare type PlotlyName = 'Plotly' | 'ViaCDN' | 'ViaWindow';
 export declare class PlotlyService {
     protected static instances: Plotly.PlotlyHTMLElement[];
@@ -18,8 +17,5 @@ export declare class PlotlyService {
     plot(div: Plotly.PlotlyHTMLElement, data: Plotly.Data[], layout?: Partial<Plotly.Layout>, config?: Partial<Plotly.Config>, frames?: Partial<Plotly.Config>[]): Promise<any>;
     update(div: Plotly.PlotlyHTMLElement, data: Plotly.Data[], layout?: Partial<Plotly.Layout>, config?: Partial<Plotly.Config>, frames?: Partial<Plotly.Config>[]): Promise<any>;
     resize(div: Plotly.PlotlyHTMLElement): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<PlotlyService, never>;
-    static ɵprov: i0.ɵɵInjectableDeclaration<PlotlyService>;
 }
 export {};
-//# sourceMappingURL=plotly.service.d.ts.map

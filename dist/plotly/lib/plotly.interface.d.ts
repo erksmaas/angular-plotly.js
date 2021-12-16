@@ -20,4 +20,3 @@ export declare namespace Plotly {
         react(div: Plotly.PlotlyHTMLElement, data: Plotly.Data[], layout?: Partial<Plotly.Layout>, config?: Partial<Plotly.Config>): Promise<PlotlyHTMLElement>;
     }
 }
-//# sourceMappingURL=plotly.interface.d.ts.map
