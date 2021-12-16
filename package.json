@@ -1,5 +1,5 @@
 {
-  "name": "angular-plotly.js",
+  "name": "@erksmaas/angular-plotly.js",
   "version": "4.0.4",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,6 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.1",
     "@angular/common": "~12.2.1",
