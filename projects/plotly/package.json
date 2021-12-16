@@ -1,5 +1,5 @@
 {
-  "name": "angular-plotly.js",
+  "name": "@erksmaas/angular-plotly.js",
   "version": "4.0.4",
   "license": "MIT",
   "peerDependencies": {
