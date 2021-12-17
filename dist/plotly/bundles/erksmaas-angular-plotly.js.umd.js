@@ -469,7 +469,14 @@
         };
         // tslint:enable max-line-length
         PlotlyService.prototype.resize = function (div) {
-            return this._getPlotly().Plots.resize(div);
+            if (div) {
+                try {
+                    return this._getPlotly().Plots.resize(div);
+                }
+                catch (e) {
+                    console.error('caught error resizing', e);
+                }
+            }
         };
         return PlotlyService;
     }());
