@@ -123,11 +123,9 @@ export class PlotlyService {
 
     public resize(div: Plotly.PlotlyHTMLElement): void {
         if (div) {
-            try {
-                return this._getPlotly().Plots.resize(div);
-            } catch (e) {
-                console.error('caught error resizing', e);
-            }
+            console.log(div);
+            console.log('display: ', window.getComputedStyle(div).display);
+            return this._getPlotly().Plots.resize(div);
         }
     }
 }
