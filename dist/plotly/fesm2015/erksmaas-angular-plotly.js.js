@@ -106,11 +106,11 @@ class PlotlyService {
             // console.log('display: ', window.getComputedStyle(div).display);
             const display = (_a = window.getComputedStyle(div)) === null || _a === void 0 ? void 0 : _a.display;
             if (display && display !== 'none') {
-                console.log('visible so resizing');
+                // console.log('visible so resizing');
                 return this._getPlotly().Plots.resize(div);
             }
             else {
-                console.log('not visible so not resizing');
+                // console.log('not visible so not resizing');
             }
         }
     }
