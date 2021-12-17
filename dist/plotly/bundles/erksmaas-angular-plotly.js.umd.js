@@ -374,10 +374,10 @@
             }
         };
         PlotlyService.prototype.getInstanceByDivId = function (id) {
-            var e_1, _a;
+            var e_1, _b;
             try {
-                for (var _b = __values(PlotlyService.instances), _c = _b.next(); !_c.done; _c = _b.next()) {
-                    var instance = _c.value;
+                for (var _c = __values(PlotlyService.instances), _d = _c.next(); !_d.done; _d = _c.next()) {
+                    var instance = _d.value;
                     if (instance && instance.id === id) {
                         return instance;
                     }
@@ -386,7 +386,7 @@
             catch (e_1_1) { e_1 = { error: e_1_1 }; }
             finally {
                 try {
-                    if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+                    if (_d && !_d.done && (_b = _c.return)) _b.call(_c);
                 }
                 finally { if (e_1) throw e_1.error; }
             }
@@ -395,11 +395,11 @@
         PlotlyService.prototype.getPlotly = function () {
             return __awaiter(this, void 0, void 0, function () {
                 var _this = this;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
                         case 0: return [4 /*yield*/, this.waitFor(function () { return _this._getPlotly() !== 'waiting'; })];
                         case 1:
-                            _a.sent();
+                            _b.sent();
                             return [2 /*return*/, this._getPlotly()];
                     }
                 });
@@ -427,11 +427,11 @@
             return __awaiter(this, void 0, void 0, function () {
                 var obj;
                 var _this = this;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
                         case 0: return [4 /*yield*/, this.waitFor(function () { return _this._getPlotly() !== 'waiting'; })];
                         case 1:
-                            _a.sent();
+                            _b.sent();
                             if (frames) {
                                 obj = { data: data, layout: layout, config: config, frames: frames };
                                 return [2 /*return*/, this._getPlotly().newPlot(div, obj).then(function () { return PlotlyService.insert(div); })];
@@ -469,10 +469,18 @@
         };
         // tslint:enable max-line-length
         PlotlyService.prototype.resize = function (div) {
+            var _a;
             if (div) {
-                console.log(div);
-                console.log('display: ', window.getComputedStyle(div).display);
-                return this._getPlotly().Plots.resize(div);
+                // console.log(div);
+                // console.log('display: ', window.getComputedStyle(div).display);
+                var display = (_a = window.getComputedStyle(div)) === null || _a === void 0 ? void 0 : _a.display;
+                if (display && display !== 'none') {
+                    console.log('visible so resizing');
+                    return this._getPlotly().Plots.resize(div);
+                }
+                else {
+                    console.log('not visible so not resizing');
+                }
             }
         };
         return PlotlyService;

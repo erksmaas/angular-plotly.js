@@ -123,9 +123,15 @@ export class PlotlyService {
 
     public resize(div: Plotly.PlotlyHTMLElement): void {
         if (div) {
-            console.log(div);
-            console.log('display: ', window.getComputedStyle(div).display);
-            return this._getPlotly().Plots.resize(div);
+            // console.log(div);
+            // console.log('display: ', window.getComputedStyle(div).display);
+            const display = window.getComputedStyle(div)?.display;
+            if (display && display !== 'none') {
+                console.log('visible so resizing');
+                return this._getPlotly().Plots.resize(div);
+            } else {
+                console.log('not visible so not resizing');
+            }
         }
     }
 }
