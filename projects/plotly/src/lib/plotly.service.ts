@@ -122,6 +122,8 @@ export class PlotlyService {
     // tslint:enable max-line-length
 
     public resize(div: Plotly.PlotlyHTMLElement): void {
-        return this._getPlotly().Plots.resize(div);
+        if (div) {
+            return this._getPlotly().Plots.resize(div);
+        }
     }
 }
